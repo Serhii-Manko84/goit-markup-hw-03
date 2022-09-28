@@ -53,9 +53,33 @@ button {
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline-style: auto;
 }
+
+.heading {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        padding-bottom: 50px;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+
     /* outline-style: auto; */
+
 
 /*Стилы для index.html*/
 
@@ -98,12 +122,14 @@ button {
     display: flex;
     column-gap: 50px;
     margin-left: 93px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .nav-link { 
     font-weight: 500;
     color: var(--brand-color-two);
-}
+    }
 
 .nav-link-contakts {
     color: var(--brand-tekst-color);
@@ -120,12 +146,13 @@ button {
 .contact {
     display: flex;
     column-gap: 50px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 /*------------------hero--------------------*/
 
 .hero {
-    padding-top: 200px;
     text-transform:uppercase;
     color: var(--brand-color-three);
     background-color: #2F303A;
@@ -135,7 +162,6 @@ button {
     width: 700px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 47px;
     padding-top: 200px;
     padding-bottom: 280px;
     
@@ -147,6 +173,7 @@ button {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
+    margin-bottom: 30px;
     }
 
 .cursor {
@@ -164,31 +191,18 @@ button {
 
 /*---------------features-----------*/
 
-.features {
-
-}
-
-.features-section {
-   
-
-}
-
-.features-section-list {
+  .features-list {
     display: flex;
-    margin-top: 47px;
-    margin-bottom: 47px;
     column-gap: 30px;
-    padding-top: 10px;
-}
-
-.heading-two {
-    color: #F5F5F5;
-}
+    flex-wrap: nowrap;
+    flex-basis: calc((100% - 90px) / 4);
+  }
 
 .subject {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    margin-bottom: 10px;
 }
     
 .text {
@@ -199,35 +213,31 @@ button {
 
 /*--------------------------works--------------------*/
 
-.works {
-    margin-top: 47px;
-    margin-bottom: 47px;
-}
-
 .works-list {
     display: flex;
-    column-gap: 30px;
-}
-
-.heading {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    padding-bottom: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 
 /*-----------------job-----------------*/
 
 .job {
-    margin-top: 47px;
-    margin-bottom: 47px;
+    background: #F5F4FA;
 }
 
 .job-list {
     display: flex;
-    column-gap: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 90px) / 4);
+}
+
+.jop-list-item {
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+
 }
 
 .job-name {
@@ -235,8 +245,8 @@ button {
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .job-titl {
@@ -249,7 +259,8 @@ button {
 /*--------------------------Футер--------------------*/
 
 .footer {
-    margin-top: 47px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: #2F303A;
     }
 
@@ -257,9 +268,19 @@ button {
     font-style: normal;
 }
 
+.list-address {
+    margin-top: 20px;
+}
+
+.list-mail {
+    margin-top: 10px;
+}
+
+.list-tel {
+    margin-top: 10px;
+}
+
 .nav-link-adres {
-    /* padding-top: 20px;
-    padding-bottom: 10px; */
     color: var(--brand-color-three);
     text-decoration: none;
 }
@@ -275,32 +296,61 @@ button {
 
 /*-------------------Стилі для портфоліє---------------*/
 
+
+.order-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
 .btn {
 font-weight: 500;
 font-size: 16px;
 line-height: 1.625;
-text-align: center;
+padding-top: 6px;
+padding-right: 22px;
+padding-bottom: 6px;
+padding-left: 22px;
 }
 
 .btn:hover, .btn:focus {color: var(--brand-color-three);
     background-color: var(--brand-color);
 }
 
+.navigation-list-item {
+background: #FFFFFF;
+border: 1px solid #EEEEEE;
+    /* border: 1px solid #EEEEEE; */
+}
+
+.navigation-list {
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    /* flex-basis: calc((100% - 8 * 30px) / 9); */
+}
+
 .caption {
     font-weight: 700;
     font-size: 18px;
-    line-height: 2;}
+    line-height: 2;
+    margin-top: 20px;
+    margin-right: 24px;
+    margin-bottom: 4px;
+    margin-left: 24px;
+}
 
 .desc {
 font-weight: 400;
 font-size: 16px;
 line-height: 1.875;
 color: var(--brand-tekst-color);
+margin-right: 24px;
+margin-bottom: 20px;
+margin-left: 24px;
 }
 
-.section {
-    background-color: #F5F5F5;
-}
 
 .accent-three {
     font-family: var(--brand-font);
